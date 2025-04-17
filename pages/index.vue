@@ -1,0 +1,734 @@
+<template>
+    <main>
+      <section class="hero-section">
+        <Swiper
+          :modules="[Navigation, Autoplay]"
+          :autoplay="{ delay: 5000 }"
+          :navigation="true"
+          :speed="1000"
+          loop
+          class="mySwiper"
+        >
+          <SwiperSlide v-for="(slide, index) in slides" :key="index">
+            <div
+              class="slide-background"
+              :style="{ backgroundImage: `url(${slide.img})` }"
+            >
+              <!-- Overlay for readability -->
+              <div class="overlay"></div>
+  
+              <!-- Animated Text -->
+              <div
+                class="slide-content text-white animate-slide"
+                :class="{ 'from-left': index % 2 === 0, 'from-right': index % 2 !== 0 }"
+              >
+                <h3 class="subtitle">{{ slide.subtitle }}</h3>
+                <h1 class="title">{{ slide.title }}</h1>
+                <p class="description">{{ slide.description }}</p>
+                <!-- <a href="#" class="top-doctor-btn mt-3">
+                  <i class="fas fa-external-link-alt"></i> Learn More
+                </a> -->
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </section>
+<section class="text-lg-start sec-section">
+    <div class="row">
+        <!-- Left Section (Image + Opening Hours) -->
+        <div class="col-lg-6 position-relative">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesabout3.jpg"
+                 alt="Dental Image" class="img-fluid rounded">
+            <div class="opening-hours-card">
+                <h2 class="open-hours-title">Opening Hours</h2>
+                <p class="open-hours-text">Monday <span>09:00 - 22:00</span></p>
+                <p class="open-hours-text">Tuesday <span>09:00 - 22:00</span></p>
+                <p class="open-hours-text">Wednesday <span>09:00 - 22:00</span></p>
+                <p class="open-hours-text">Thursday <span>09:00 - 22:00</span></p>
+                <p class="open-hours-text">Friday <span>09:00 - 22:00</span></p> 
+                <p class="open-hours-text">Saturday <span>09:00 - 22:00</span></p>
+                <p class="open-hours-text">Sunday <span>09:00 - 22:00</span></p>
+            </div>
+        </div>
+
+        <!-- Right Section (Text + Progress Bars) -->
+        <div class="col-lg-6 sec-container">
+            <h3 class="sec-text"> Welcome To Saritha dental </h3>
+            <h1 class="sec-heading"> Best Dental Clinic That You Can Trust  </h1>
+              <p class="para-text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, enim bib endum volutpat dictum, tellus risus porttitor leo. Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem.</p>
+              <div class="progress-section mb-4">
+                <div class="progress-title mb-2">Endodontic Equipment</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;">95%</div>
+                </div>
+
+                <div class="progress-title mb-2">Dental Operatory Lights</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 92%;">92%</div>
+                </div>
+
+                <div class="progress-title mb-2">Operatory Cabinetery</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%;">90%</div>
+                </div>
+
+                <div class="progress-title mb-2">Surgical Microscope</div>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 95%;">95%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="third-sect">
+    <div class="text-center">
+        <h3 class="sec-text"> Our Services </h3>
+        <h1 class="sec-heading"> A Perfect Smile Guaranteed </h1>
+        <p class="para-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur, enim bibendum volutpat dictum</p>
+    </div>
+<div class="services-container">
+    <div class="services-left">
+        <div class="service-item">
+            <div>
+                <h3 class="serv-title">General Dentistry</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon11.png" alt="Icon">
+        </div>
+        <div class="service-item">
+            <div>
+                <h3 class="serv-title">Implants</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon2.png" alt="Icon">
+        </div>
+        <div class="service-item">
+            <div>
+                <h3 class="serv-title">Prosthesis</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon8.png" alt="Icon">
+        </div>
+    </div>
+
+    <div class="doctor-image">
+        <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tes-services.png" alt="Doctor">
+    </div>
+
+    <div class="services-right">
+        <div class="service-item">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon4.png" alt="Icon">
+            <div>
+                <h3 class="serv-title">Dental Surgery</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon5.png" alt="Icon">
+            <div>
+                <h3 class="serv-title">Teeth Braces</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/tesicon6.png" alt="Icon">
+            <div>
+                <h3 class="serv-title">Whitening</h3>
+                <p>We bring the right people together to challenge established thinking</p>
+            </div>
+        </div>
+    </div>
+</div>
+   <div class="card-container py-5">
+    <div class="row">
+        <div class="col-md-4 pb-3">
+            <div class="about-card-custom s-about-f text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/Untitled-600-%C3%97-450-px-1-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Teeth Whitening Solutions</h5>
+                <p class="text-muted">Your smile is one of your most important assets, conveying confidence, warmth, and a positive attitude. However, over time, factors like aging, consumption</p>
+                <a href="#" class="fw-bold text-dark" onclick="loadPage('singleservice.html')">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom  text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/4-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Tranquil Dentistry: Conscious Sedation</h5>
+                <p class="text-muted">Conscious sedation is a technique used to induce a state of deep relaxation and calmness during dental treatments.</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom s-about-f text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/dental-veneers-and-dental-laminates-1-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Dental Veneers</h5>
+                <p class="text-muted">Dental veneers or porcelain laminates are shells of tooth coloured material that can be attached to the tooth. Unlike crowns which require more preparation, veneers…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-4 pb-3">
+            <div class="about-card-custom text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/Oral-Disinfection-600x348.jpeg" alt="Icon"
+                    >
+                </div>
+                <h5 class="fw-bold pt-3">Oral Disinfection</h5>
+                <p class="text-muted">Popularly called oral prophylaxis in dental jargon, oral disinfection means involves a host of procedures like scaling and root planning. How to check for the…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/Dental-Implants-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Dental Implants</h5>
+                <p class="text-muted">The Implant: The Implant is essentially a screw which serve as the root for your teeth. This is the part that forms the attachment with…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom s-about-f text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/03/Smile-Designing-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Smile Design</h5>
+                <p class="text-muted">A smile makeover is the process of correcting one’s smile and enhancing its appearance through a series of cosmetic dental procedures to provide optimum</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+    </div>
+    <div class="row pt-3">
+        <div class="col-md-4 pb-3">
+            <div class="about-card-custom text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/02/Wisdom-Tooth-Removal-600x348.jpg" alt="Tooth Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Wisdom Tooth Removal</h5>
+                <p class="text-muted">Wisdom teeth, or the third molars, are the backmost teeth in your mouth, which typically erupt between the ages of 17 to 21 years. As…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/02/Root-Canal-Treatment-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Root Canal</h5>
+                <p class="text-muted">In the recent past, Root Canal Treatments have given us the valuable option of saving a tooth. Frequently, the infection in our teeth surpass the…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="about-card-custom s-about-f text-center">
+                <div class="about-icon-box">
+                    <img src="https://kukatpally.sarithadental.com/wp-content/uploads/2020/02/Crowns-and-Bridges-600x348.jpg" alt="Implant Icon">
+                </div>
+                <h5 class="fw-bold pt-3">Crowns and Bridges</h5>
+                <p class="text-muted">Crowns are tooth shaped caps which are placed over a tooth to restore its form, function, and aesthetics. This may be necessary in the event…</p>
+                <a href="#" class="fw-bold text-dark">Read More →</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<section class="stats-section">
+        <div class="row justify-content-center">
+            <div class="col stats-item">
+                <h2>10+</h2>
+                <p>Years Experience</p>
+            </div>
+            <div class="col stats-item">
+                <h2>99%</h2>
+                <p>Happy Clients</p>
+            </div>
+            <div class="col stats-item tooth-column">
+                <div class="tooth-icon">
+                    <img src="assets/images/tooth.png"  alt="Tooth Icon">
+                </div>
+            </div>
+            <div class="col stats-item">
+                <h2>20+</h2>
+                <p>Professional Team</p>
+            </div>
+            <div class="col stats-item">
+                <h2>10+</h2>
+                <p>Award Winning</p>
+            </div>
+        </div>
+</section>
+<section class="text-lg-start que-section">
+    <div class="row">
+        <!-- Left Section (Image + Question card) -->
+        <div class="col-lg-6 position-relative">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/chooseus1.jpg"
+                 alt="Dental Image" class="img-fluid rounded">
+            <div class="question-card text-center">
+                <div class="phone-call-icon">
+                <img  src="assets/images/phone-call.png" alt="phone-icon">
+            </div>
+                <h3 class="question-card-title">Have Any Question?</h3>
+                <h3>+919346852028</h3>
+            </div>
+        </div>
+
+        <!-- Right Section (Text + Progress Bars) -->
+        <div class="col-lg-6 que-container">
+            <h3 class="que-text"> Why Choose Us </h3>
+            <h1 class="que-heading"> A Leading Visionary In Dental Care </h1>
+              <p class="para-text"> Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros, bibendum et ligula vitae, sollicitudin.</p>
+            <div class="que-service-item pt-2 pb-3">
+                <img  src="assets/images/tooth.png" alt="phone-icon">
+                <div class="m-2">
+                    <h3 class="que-serv-title">Quality Services</h3>
+                    <p>Donec efficitur, enim bibendum volut pat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros.</p>
+                </div>
+            </div>
+            <div class="que-service-item pb-3">
+                <img  src="assets/images/stethoscope.png" alt="seth-icon">
+            <div class="m-2">
+                    <h3 class="que-serv-title">Modern Technology</h3>
+                    <p>Donec efficitur, enim bibendum volut pat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros.</p>
+                </div>
+            </div>
+            <div class="que-service-item">
+                <img  src="assets/images/doctor.png" alt="doctor-icon">
+             <div class="m-2">
+                    <h3 class="que-serv-title">Professional Doctor</h3>
+                    <p>Donec efficitur, enim bibendum volut pat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonial-section">
+    <div class="background-overlay"></div>
+    <div class="testimonial-content">
+        <h3 class="testimonial-title">Testimonials</h3>
+        <h1 class="testimonial-heading">What Client Says</h1>
+        <p class="testimonial-text">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin feugiat faucibus ante. Etiam bibendum efficitur gravida. Maecenas auctor quis dui id pharetra. Suspendisse hendrerit eleifend ex vel blandit. Cras diam erat, tincidunt non pretium nec, convallis et lorem. Nunc tristique purus at tortor interdum pretium."
+        </p>
+        <div class="testimonial-profile">
+            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/testimonial-2.png" alt="Client Image" class="testimonial-avatar">
+            <div class="client-info">
+                <h3 class="client-name">Dita Elviza</h3>
+                <p class="client-role">Designer</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="text-lg-start sec-section">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-lg-8">
+                    <h3 class="top-doctor-title">Our Doctor</h3>
+                    <h1 class="top-doctor-heading">Professional Doctor</h1>
+                    <p class="top-doctor-text">
+                        Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget eleifend enim metus eu sem. 
+                        Ut ipsum eros, bibendum et ligula vitae, sollicitudin.
+                    </p>
+                </div>
+                <!-- Button -->
+                <div class="col-lg-4 text-lg-end text-start pt-2">
+                    <a href="#" class="top-doctor-btn">
+                        <i class="fas fa-external-link-alt"></i>
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="py-5">
+                <div class="row g-3">
+                    <!-- Doctor Card 1 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-card">
+                            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/doctor4.png" alt="Doctor">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Doctor#01</h4>
+                                <p class="doctor-title">Senior Dentist</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Doctor Card 2 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-card">
+                            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/doctor6.png" alt="Doctor">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Doctor#02</h4>
+                                <p class="doctor-title">Dentist</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Doctor Card 3 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-card">
+                            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/doctor555.png" alt="Doctor">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Doctor#03</h4>
+                                <p class="doctor-title">Orthodontist</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Doctor Card 4 -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="doctor-card">
+                            <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/doctor22.png" alt="Doctor">
+                            <div class="doctor-info">
+                                <h4 class="doctor-name">Doctor#04</h4>
+                                <p class="doctor-title">Orthodontist</p>
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+<section class="form-sect text-lg-start sec-section">
+        <div class="row">
+            <!-- Left Side: Appointment Form -->
+            <div class="col-md-6 order-2 order-lg-1">
+                <div class="appointment-form">
+                    <input type="text" placeholder="Your Name">
+                    <input type="text" placeholder="Your Phone">
+                    <input type="email" placeholder="Your Mail">
+                    <select>
+                        <option>Select Service</option>
+                    </select>
+                    <textarea placeholder="Your Message"></textarea>
+                    <button class="btn">Make Appointment</button>
+                </div>
+            </div>
+    
+            <!-- Right Side: Text + Contact Info -->
+            <div class="col-md-6 order-1 order-lg-2">
+                <h5 class="section-title">Book Now</h5>
+                <h1 class="appointment-title">Make An Appointment</h1>
+                <p class="para-text">
+                    Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros, bibendum et ligula vitae, sollicitudin.
+                </p>
+                <p class="para-text">
+                    Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros, bibendum et ligula vitae, sollicitudin.
+                </p>
+    
+                <div class="row d-flex align-items-start">
+                    <!-- Left Side: Service Steps -->
+                    <div class="col-6">
+                        <div class="service-steps">
+                            <div class="service-item">
+                                <div class="icon"><i class="fas fa-file-alt"></i></div>
+                                <div class="text">
+                                    <h4>Make Appointment</h4>
+                                    <p>Donec efficitur, enim biben.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="icon"><i class="fas fa-user-md"></i></div>
+                                <div class="text">
+                                    <h4>Meet The Dentist</h4>
+                                    <p>Donec efficitur, enim biben.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="icon"><i class="fas fa-tooth"></i></div>
+                                    <div class="text">
+                                    <h4>Dental Check Up</h4>
+                                    <p>Donec efficitur, enim biben.</p>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <div class="icon"><i class="fas fa-money-check-alt"></i></div>
+                                <div class="text">
+                                    <h4>Priscribe & Payment</h4>
+                                    <p>Donec efficitur, enim biben.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Right Side: Contact Card -->
+                    <div class=" col-6">
+                        <div class="contact-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                                <div class="contact-text">+919346852028</div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                                <div class="contact-text">saritha.clinic
+                                 @gmail.com</div>
+                            </div><div class="contact-item">
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="contact-text">Kompally, Hyderabad, 
+                                    Telangana 500062</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+   </section>
+   <section class="py-5 text-lg-start sec-section">
+    <div class="col-12">
+    <h4 class="section-title">Our Blog</h4>
+    <h2 class="appointment-title">Latest Blog & Article</h2>
+    <p class="blog-para-text">
+        Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros, bibendum et ligula vitae, sollicitudin.    </p>
+    <p class="blog-para-text">
+        Donec efficitur, enim bibendum volutpat dictum, tellus risus porttitor leo, eget ele ifend enim metus eu sem. Ut ipsum eros, bibendum et ligula vitae, sollicitudin.    </p>
+    <button class="top-doctor-btn"><i class="fas fa-external-link-alt"></i> Learn More</button>
+</div>
+    <div class="row mt-4">
+        <!-- Blog Card 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="blog-card p-4">
+                <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/blog3.jpg" alt="Blog Image">
+                <h4 class="mt-3">New Guidelines Aim To Improve Quality Of Dentistry</h4>
+                <p class="small"><i class="far fa-calendar-alt"></i> August 31, 2022 &nbsp; <i class="far fa-comment"></i> 0</p>
+                <p class="blog-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent risus est, vestibulum non erat non...</p>
+                <a href="#" class="btn-learn-more">Learn More →</a>
+            </div>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="blog-card p-4">
+                <img src="https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/blog11.jpg" alt="Blog Image">
+                <h4 class="mt-3">Everything You Want To Know About Cosmetic Dentistry</h4>
+                <p class="small"><i class="far fa-calendar-alt"></i> August 28, 2022 &nbsp; <i class="far fa-comment"></i> 0</p>
+                <p class="blog-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt mauris ut iaculis vehicula...</p>
+                <a href="#" class="btn-learn-more">Learn More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section >
+        <div class="row align-items-center newsletter-section">
+            <div class="col-lg-6 newsletter-container">
+                <h2 class="newsletter-title">Subscribe Our Newsletter</h2>
+                <p class="newsletter-text pt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Your Mail">
+                    <button class="subscribe-button">Subscribe Now</button>
+                </div>
+                <p class="newsletter-text mt-2">
+                    *Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.
+                </p>
+            </div>
+    </div>
+    
+</section>
+</main>
+  </template>
+  
+  <script setup>
+import "@/assets/style.css";
+import { useScrollEffects } from "@/composables/useScrollEffects";
+
+// Activate the scroll effects
+useScrollEffects();
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import { Navigation, Autoplay } from 'swiper/modules';
+  
+  const slides = [
+    {
+      title: 'A Better Life Starts With A Beautiful Smile',
+      subtitle: 'Dental Care • Kompally, Hyderabad',
+      description: 'Providing professional dental services in a caring and comfortable environment.',
+      img: 'https://aadhyadentalcare.com/assets/images/Banner.png',
+    },
+    {
+      title: 'Smile Confidently With Expert Dental Care',
+      subtitle: 'Advanced Technology • Gentle Hands',
+      description: 'Your oral health is our top priority with personalized care and modern techniques.',
+      img: 'https://rykit.rometheme.pro/remedicare/wp-content/uploads/sites/17/2022/08/blog3.jpg',
+    },
+  ];
+  </script>
+  
+  <style scoped>
+  .hero-section {
+    position: relative;
+    height: 90vh; /* Reduced height */
+    width: 100%;
+  }
+  
+  .mySwiper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slide-background {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 5%;
+  }
+  
+  /* Overlay behind text for visibility */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    animation-duration: 1s;
+  }
+  
+  .subtitle {
+    color: #2EC4B6;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+  }
+  
+  /* Learn More button */
+  .top-doctor-btn {
+    background-color: #2EC4B6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+  }
+  .top-doctor-btn:hover {
+    background-color: #1ca89c;
+  }
+  
+/* Swiper Navigation Buttons */
+/* Swiper Buttons */
+::v-deep(.swiper-button-next),
+::v-deep(.swiper-button-prev) {
+  background-color: rgba(0, 0, 0, 0.3);  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+/* On Hover - slightly darker */
+::v-deep(.swiper-button-next:hover),
+::v-deep(.swiper-button-prev:hover) {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+/* Arrow Icons */
+::v-deep(.swiper-button-next::after),
+::v-deep(.swiper-button-prev::after) {
+  color: #2EC4B6 !important;
+  font-size: 20px;
+  font-weight: bold;
+}
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .slide-content {
+      max-width: 90%;
+    }
+  }
+  
+  /* Slide-in animation classes */
+  .animate-slide {
+    opacity: 0;
+    transform: translateX(50px);
+    animation-fill-mode: forwards;
+  }
+  
+  .animate-slide.from-left {
+    animation: slideFromLeft 1s forwards;
+  }
+  
+  .animate-slide.from-right {
+    animation: slideFromRight 1s forwards;
+  }
+  
+  @keyframes slideFromLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideFromRight {
+    from {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  </style>
+  
