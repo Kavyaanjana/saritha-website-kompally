@@ -144,9 +144,8 @@
 </main> 
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import "@/assets/style.css";
-import { onMounted } from 'vue';
 import { useScrollEffects } from "@/composables/useScrollEffects";
 
 const services = ref([
